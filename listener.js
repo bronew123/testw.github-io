@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cors({
-  origin:'*'
+  origin:'https://www.youtube.com/watch?v=PNtFSVU-YTI'
 }))
 app.get("/", function (req, res) {
   res.send("<h1>Test</h1>");
