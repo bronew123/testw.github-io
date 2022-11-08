@@ -9,7 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cors({
-  origin:'https://www.youtube.com/watch?v=PNtFSVU-YTI'
+  origin:'*',
+  
 }))
 app.get("/", function (req, res) {
   res.send("<h1>Test</h1>");
@@ -22,7 +23,7 @@ app.post("/", function (req, res) {
 });
 
 //sending a request
-
+/*
 await fetch(window.location.href, {
   // Adding method type
   method: "POST",
@@ -39,6 +40,6 @@ await fetch(window.location.href, {
     "Content-type": "application/json; charset=UTF-8",
   },
 });
-
+*/
 //
 app.listen(3000);
