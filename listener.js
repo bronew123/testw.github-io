@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+const cors = require('cors');
 //var bodyParser = require("body-parser");
 //var parser = bodyParser.urlencoded({extended:false});
 //listen
@@ -8,8 +8,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.listen(3000);
-
+app.use(cors({
+  origin:'*'
+}))
 app.get("/", function (req, res) {
   res.send("<h1>Test</h1>");
 });
@@ -40,3 +41,4 @@ await fetch(window.location.href, {
 });
 
 //
+app.listen(3000);
