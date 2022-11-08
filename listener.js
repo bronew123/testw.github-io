@@ -13,6 +13,7 @@ app.use(cors({
   
 }))
 app.get("/", function (req, res) {
+  res.header('Access-Control-Allow-Origin', '*');
   res.send("<h1>Test</h1>");
 });
 
