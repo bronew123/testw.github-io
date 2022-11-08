@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cors({
-  origin:'*',
+  origin:true,
   
 }))
 app.get("/", function (req, res) {
@@ -42,4 +42,4 @@ await fetch(window.location.href, {
 });
 */
 //
-app.listen('https://bronew123.github.io/testw.github-io/');
+app.listen(3000);
