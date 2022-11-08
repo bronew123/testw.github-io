@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const cors = require('cors');
+const cors = require("cors");
 //var bodyParser = require("body-parser");
 //var parser = bodyParser.urlencoded({extended:false});
 //listen
@@ -8,11 +8,18 @@ const cors = require('cors');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(cors({
-  
-}))
+app.use(
+  cors({
+    origin: "http:/www.youtube.com",
+  })
+);
+
+app.get("/e", function (req, res) {
+  res.json({ name: "ME", age: "44" });
+});
+
 app.get("/", function (req, res) {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header("Access-Control-Allow-Origin", "*");
   res.send("<h1>Test</h1>");
 });
 
@@ -21,6 +28,5 @@ app.post("/", function (req, res) {
   console.log("Post received");
   res.send(req.body);
 });
-
 
 app.listen(3000);
