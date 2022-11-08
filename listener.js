@@ -23,24 +23,4 @@ app.post("/", function (req, res) {
   res.send(req.body);
 });
 
-//sending a request
-/*
-await fetch(window.location.href, {
-  // Adding method type
-  method: "POST",
-
-  // Adding body or contents to send
-  body: JSON.stringify({
-    title: "foo",
-    body: "bar",
-    userId: 1,
-  }),
-
-  // Adding headers to the request
-  headers: {
-    "Content-type": "application/json; charset=UTF-8",
-  },
-});
-*/
-//
 app.listen(3000);
